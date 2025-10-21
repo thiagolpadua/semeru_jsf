@@ -1,5 +1,6 @@
 package br.com.semeru.model.entities;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -14,7 +15,7 @@ import org.hibernate.annotations.ForeignKey;
 
 @Entity
 @Table(name="sexo")
-public class Sexo {
+public class Sexo implements Serializable{
 
     private static final long serialVersionUID = 1L;
 

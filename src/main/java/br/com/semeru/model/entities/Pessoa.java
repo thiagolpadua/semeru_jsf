@@ -1,5 +1,6 @@
 package br.com.semeru.model.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -15,7 +16,9 @@ import org.hibernate.annotations.ForeignKey;
 
 @Entity
 @Table(name="pessoa")
-public class Pessoa {
+public class Pessoa implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue
