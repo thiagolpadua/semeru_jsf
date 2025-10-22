@@ -117,42 +117,6 @@
         <!-- ######## TEMAS DO PRIMEFACES ######### -->
         <dependency>
             <groupId>org.primefaces.themes</groupId>
-            <artifactId>cupertino</artifactId>
-            <version>${themes.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.primefaces.themes</groupId>
-            <artifactId>le-frog</artifactId>
-            <version>${themes.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.primefaces.themes</groupId>
-            <artifactId>sam</artifactId>
-            <version>${themes.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.primefaces.themes</groupId>
-            <artifactId>pepper-grinder</artifactId>
-            <version>${themes.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.primefaces.themes</groupId>
-            <artifactId>smoothness</artifactId>
-            <version>${themes.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.primefaces.themes</groupId>
-            <artifactId>ui-lightness</artifactId>
-            <version>${themes.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.primefaces.themes</groupId>
             <artifactId>south-street</artifactId>
             <version>${themes.version}</version>
         </dependency>
@@ -161,13 +125,13 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-            <version>$(slf4j.version)</version>
+            <version>${slf4j.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>$(slf4j.version)</version>
+            <version>${slf4j.version}</version>
         </dependency>
 
         <!-- |||||| DEPENDÊNCIAS DO HIBERNATE |||||| -->
@@ -299,14 +263,13 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
         </dependency>
-
+        
         <!-- ||||||| DEPENDÊNCIAS DO J-UNIT |||||||| -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.8.2</version>
         </dependency>
-
 
     </dependencies>
 

@@ -24,7 +24,7 @@ public class Estado implements Serializable {
     private String nome;
 
     @OneToMany(mappedBy = "estado", fetch = FetchType.LAZY)
-    @ForeignKey(name = "EstadoEndereco")
+    @ForeignKey(name = "EnderecoEstado")
     private List<Endereco> enderecos;
 
     public Estado() {

@@ -5,9 +5,12 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -39,109 +42,88 @@ public class Pessoa implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date dataDeCadastro;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @ForeignKey(name = "PessoaSexo")
+    @JoinColumn(name = "IdSexo", referencedColumnName = "IdSexo")
     private Sexo sexo;
+
+    @OneToOne(mappedBy = "pessoa", fetch = FetchType.LAZY)
+    @ForeignKey(name = "PessoaEndereco")
+    private Endereco endereco;
 
     public Pessoa() {}
 
-    
-    
     public Integer getIdPessoa() {
         return idPessoa;
     }
-
-
 
     public void setIdPessoa(Integer idPessoa) {
         this.idPessoa = idPessoa;
     }
 
-
-
     public String getNome() {
         return nome;
     }
-
-
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-
-
     public String getEmail() {
         return email;
     }
-
-
 
     public void setEmail(String email) {
         this.email = email;
     }
 
-
-
     public String getTelefone() {
         return telefone;
     }
-
-
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
-
-
     public String getCpf() {
         return cpf;
     }
-
-
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-
-
     public Date getDataDeNascimento() {
         return dataDeNascimento;
     }
-
-
 
     public void setDataDeNascimento(Date dataDeNascimento) {
         this.dataDeNascimento = dataDeNascimento;
     }
 
-
-
     public Date getDataDeCadastro() {
         return dataDeCadastro;
     }
-
-
 
     public void setDataDeCadastro(Date dataDeCadastro) {
         this.dataDeCadastro = dataDeCadastro;
     }
 
-
-
     public Sexo getSexo() {
         return sexo;
     }
-
-
 
     public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
 
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
 
     @Override
     public int hashCode() {
